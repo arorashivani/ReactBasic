@@ -4,16 +4,20 @@ import ReactDOM from 'react-dom';
 
 let contacts = [{
   "name":"Shivani",
-  "number":"999 999 9911"
+  "number":"999 999 9911",
+  "key":1
 },{
   "name":"tim",
-  "number":"999 999 1234"
+  "number":"999 999 1234",
+  "key":2
 },{
   "name":"rob",
-  "number":"999 999 2233"
+  "number":"999 999 2233",
+  "key":3
 },{
   "name":"tony",
-  "number":"999 999 9221"
+  "number":"999 999 9221",
+  "key":4
 }]
 class App extends React.Component{
   render(){
