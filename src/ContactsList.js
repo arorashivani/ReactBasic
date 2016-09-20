@@ -6,18 +6,22 @@ export class ContactsList extends React.Component{
   constructor(){
     super();
     this.state={
-      search:"Learning"
+      "search":""
     };
   }
+  updateSearch(){
+    this.setState({search:event.target.value})
+  }
   render(){
+    let filteredContacts = this.props.contacts.filteredContacts;
     return (
       <div>
       <ul>
-      {this.props.contacts.map((contact)=>{
+      {filteredContacts.map((contact)=>{
         return <Contact contact={contact}/>
       })}
       </ul>
-      <input type="text" value = {this.state.search} onChange={this.updateSearch} />
+      <input type="text" value = {this.state.search} onChange={this.updateSearch.bind(this)} />
       </div>
     )
   }
